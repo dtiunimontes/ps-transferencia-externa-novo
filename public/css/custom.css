@@ -1,0 +1,17 @@
+.processo_seletivo {
+    font-weight: bolder;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('/img/ico-seta-appearance.gif') no-repeat;
+    background-position: 120px center;
+    width: 150px;
+    height:30px;
+    border:1px solid #ddd;
+    padding-left: 30px;
+}
+
+.logo-img {
+    position: relative;
+    top: -5px;
+}
