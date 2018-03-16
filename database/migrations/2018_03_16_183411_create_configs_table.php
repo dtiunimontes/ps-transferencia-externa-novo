@@ -30,7 +30,8 @@ class CreateConfigsTable extends Migration
             $table->dateTime('rf_etapa_2');
             $table->dateTime('recurso_etapa_1');
             $table->dateTime('recurso_etapa_2');
-            $table->date('data_vencimento_dae');
+            $table->date('data_venc_dae');
+            $table->date('data_venc_dae_indeferidos');
             $table->string('mes_referencia_dae');
         });
     }
