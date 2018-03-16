@@ -8,7 +8,7 @@
 
     <div class="row">
         <div class="col-sm-4 col-sm-offset-4">
-            <div class="card-t card-t-green">
+            <div class="card-t card-t-red">
                 <div class="content-card-t text-center">
                     <h2><b>{{ $processoSeletivoAtual->titulo }}</b></h2>
                     @if ( ! $candidatoInscritoProcessoAtual)

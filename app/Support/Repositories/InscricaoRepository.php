@@ -33,6 +33,7 @@ class InscricaoRepository extends BaseRepository
      */
     public function inscreverCandidato(Candidato $candidato, $transferenciaId, $processoSeletivoId)
     {
+        
         return $candidato->transferencias()->attach($transferenciaId, ['processo_seletivo_id' => $processoSeletivoId]);
     }
 
