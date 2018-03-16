@@ -46,20 +46,20 @@ class InscricaoProcessoSeletivoAtualController extends Controller
      */
     public function inscreverCandidato(Request $request)
     {
+
         $processoSeletivoAtualId = session()->get('processoSeletivoAtivoId');
         $processoSeletivoAtualTitulo = session()->get('processoSeletivoAtivo');
-
+    
         if ($this->verificarExistenciaInscricao(auth()->user()->id, $processoSeletivoAtualId)) {
             return redirect()
                 ->back()
                 ->with('error', 'Só é possível realizar uma inscrição por processo!');
         }
-
         $candidato = $this->candidatoRepo->findById(auth()->user()->id);
         $transferenciaId = $request->input('transferencia_id');
-
+        //fazer inscrição do candidato
         $this->inscricaoRepo->inscreverCandidato($candidato, (int) $transferenciaId, (int) $processoSeletivoAtualId);
-
+        
         return redirect()
             ->route('candidato.home')
             ->with('success',"Sua inscrição no processo seletivo da Transferência Externa - {$processoSeletivoAtualTitulo} foi realizada com sucesso!");

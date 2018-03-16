@@ -38,8 +38,8 @@ class CreateInscricoesTable extends Migration
                 ->default(0)
                 ->comment('1 - dae paga, 0 - dae não paga');
 
-            $table->date('data_vencimento_dae');
-            $table->string('mes_referencia_dae');
+            $table->date('data_vencimento_dae')->nullable();
+            $table->string('mes_referencia_dae')->nullable();
 
             $table->boolean('envelope_1')
                 ->default(0)
